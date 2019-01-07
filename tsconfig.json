@@ -13,6 +13,7 @@
     "skipLibCheck": true,
     "pretty": true
   },
+  "types": ["jest"],
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "typeRoots": ["node_modules/@types"]
 }

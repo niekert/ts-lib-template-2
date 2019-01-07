@@ -16,14 +16,44 @@
     "build-types": "npm run clean-types && tsc -p tsconfig.dts.json",
     "type-check": "tsc",
     "lint": "tslint 'src/**/*.{ts, tsx}'",
-    "test": "jest",
+    "test": "NODE_ENV=testing jest",
     "bundlesize": "bundlesize",
     "prettier": "prettier --write \"{,!(node_modules|custom-typings|types)/**/}*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "cypress"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "tests"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.12",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "bundlesize": "^0.17.0",
     "jest": "^23.6.0",
     "rollup": "^1.0.2",
