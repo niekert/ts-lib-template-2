@@ -1,0 +1,7 @@
+{
+  "name": "create-ts-lib",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Niek Kruse <niekkruse70@gmail.com>",
+  "license": "MIT"
+}
