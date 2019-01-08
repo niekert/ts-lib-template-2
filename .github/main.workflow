@@ -9,19 +9,19 @@ action "Dep" {
 }
 
 action "Test" {
-  needs = "Dep"
+  needs = ["Dep"]
   uses = "borales/actions-yarn@master"
   args = "test"
 }
 
 action "Build" {
-  needs = "Dep"
+  needs = ["Dep"]
   uses = "borales/actions-yarn@master"
   args = "build"
 }
 
 action "Types" {
-  needs = "Dep"
+  needs = ["Dep"]
   uses = "borales/actions-yarn@master"
-  args = "build"
+  args = "types"
 }
